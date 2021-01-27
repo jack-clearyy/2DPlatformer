@@ -1,0 +1,1036 @@
+[gd_scene load_steps=80 format=2]
+
+[ext_resource path="res://assets/Player/frame_18_delay-0.1s.png" type="Texture" id=1]
+[ext_resource path="res://assets/Player/frame_20_delay-0.1s.png" type="Texture" id=2]
+[ext_resource path="res://assets/Player/frame_13_delay-1s.png" type="Texture" id=3]
+[ext_resource path="res://assets/Player/frame_04_delay-0.1s.png" type="Texture" id=4]
+[ext_resource path="res://assets/Player/frame_16_delay-0.1s.png" type="Texture" id=5]
+[ext_resource path="res://assets/Player/frame_07_delay-0.1s.png" type="Texture" id=6]
+[ext_resource path="res://assets/Player/frame_09_delay-0.1s.png" type="Texture" id=7]
+[ext_resource path="res://assets/Player/frame_05_delay-0.1s.png" type="Texture" id=8]
+[ext_resource path="res://assets/Player/frame_14_delay-0.1s.png" type="Texture" id=9]
+[ext_resource path="res://assets/Player/frame_00_delay-0.1s.png" type="Texture" id=10]
+[ext_resource path="res://assets/Player/frame_01_delay-0.1s.png" type="Texture" id=11]
+[ext_resource path="res://assets/Player/frame_02_delay-0.1s.png" type="Texture" id=12]
+[ext_resource path="res://assets/Player/frame_03_delay-0.1s.png" type="Texture" id=13]
+[ext_resource path="res://assets/Player/frame_21_delay-0.1s.png" type="Texture" id=14]
+[ext_resource path="res://assets/Player/frame_15_delay-0.1s.png" type="Texture" id=15]
+[ext_resource path="res://assets/Presets/BigTileSet.tres" type="TileSet" id=16]
+[ext_resource path="res://assets/Player/frame_06_delay-0.1s.png" type="Texture" id=17]
+[ext_resource path="res://assets/Player/frame_08_delay-0.1s.png" type="Texture" id=18]
+[ext_resource path="res://src/Actors/Player.gd" type="Script" id=19]
+[ext_resource path="res://assets/Player/frame_22_delay-0.1s.png" type="Texture" id=20]
+[ext_resource path="res://assets/Player/frame_19_delay-0.1s.png" type="Texture" id=21]
+[ext_resource path="res://assets/Player/frame_23_delay-0.1s.png" type="Texture" id=22]
+[ext_resource path="res://assets/Player/frame_17_delay-0.1s.png" type="Texture" id=23]
+[ext_resource path="res://assets/Skeleton/Sprite Sheets/Skeleton Attack.png" type="Texture" id=24]
+[ext_resource path="res://assets/Skeleton/Sprite Sheets/Skeleton React.png" type="Texture" id=25]
+[ext_resource path="res://assets/Skeleton/Sprite Sheets/Skeleton Hit.png" type="Texture" id=26]
+[ext_resource path="res://assets/Skeleton/Sprite Sheets/Skeleton Dead.png" type="Texture" id=27]
+[ext_resource path="res://assets/Skeleton/Sprite Sheets/Skeleton Walk.png" type="Texture" id=28]
+[ext_resource path="res://assets/Skeleton/Sprite Sheets/Skeleton Idle.png" type="Texture" id=29]
+[ext_resource path="res://src/Actors/Skeleton.gd" type="Script" id=30]
+[ext_resource path="res://assets/HealthBars/HealthBarProgress.png" type="Texture" id=31]
+[ext_resource path="res://assets/Background/Background.png" type="Texture" id=32]
+[ext_resource path="res://src/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=33]
+[ext_resource path="res://src/Misc/Portal.gd" type="Script" id=34]
+[ext_resource path="res://assets/Portal/End Portal Open.png" type="Texture" id=35]
+[ext_resource path="res://src/UserInterface/RetryButton.tscn" type="PackedScene" id=37]
+[ext_resource path="res://src/UserInterface/UserInterface.gd" type="Script" id=38]
+[ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=39]
+[ext_resource path="res://assets/Font/Font.tres" type="DynamicFontData" id=40]
+[ext_resource path="res://assets/SomeEnemies/Spike_Up.png" type="Texture" id=45]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/Font/the artisan.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 120
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 40 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 40 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 40 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 70
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 40 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 50
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 40 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 10.6608, 10.8011 )
+
+[sub_resource type="DynamicFontData" id=31]
+font_path = "res://assets/Font/the artisan.otf"
+
+[sub_resource type="DynamicFont" id=32]
+size = 30
+font_data = SubResource( 31 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 120
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 40 )
+
+[sub_resource type="DynamicFont" id=34]
+size = 70
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 40 )
+
+[sub_resource type="DynamicFont" id=35]
+size = 50
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 40 )
+
+[sub_resource type="DynamicFont" id=36]
+size = 70
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 40 )
+
+[sub_resource type="DynamicFont" id=37]
+size = 50
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 40 )
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 10.6608, 10.8011 )
+
+[sub_resource type="RectangleShape2D" id=39]
+extents = Vector2( 45.7532, 96.6448 )
+
+[sub_resource type="Animation" id=40]
+length = 1.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Attack:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6, 0.8, 1.2, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [ Vector2( -90, 32 ), 180.0 ],
+"method": "set_animation_position"
+}, {
+"args": [ 12.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ 36.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ -10.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ -15.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ -10.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ -13.0 ],
+"method": "shift_animation_x"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ Vector2( -40, 35 ), 82.0 ],
+"method": "set_ray_position"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "check_attack"
+} ]
+}
+
+[sub_resource type="Animation" id=41]
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Die:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14 ]
+}
+
+[sub_resource type="Animation" id=42]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Hit:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=43]
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Idle:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [ Vector2( -50, 32 ), 96.0 ],
+"method": "set_animation_position"
+}, {
+"args": [ 10.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ -10.0 ],
+"method": "shift_animation_x"
+} ]
+}
+
+[sub_resource type="Animation" id=44]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("React:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=45]
+length = 1.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Walk:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ Vector2( -35, 32 ), 75.0 ],
+"method": "set_animation_position"
+} ]
+}
+
+[sub_resource type="RectangleShape2D" id=46]
+extents = Vector2( 36.4119, 38.9117 )
+
+[sub_resource type="SpriteFrames" id=47]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 8 ), ExtResource( 17 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "move_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "take_dmg",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 1 ), ExtResource( 21 ), ExtResource( 2 ), ExtResource( 14 ), ExtResource( 20 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "in_air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), null, ExtResource( 17 ), null, ExtResource( 18 ), null ],
+"loop": true,
+"name": "invuln_move_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), null, ExtResource( 21 ), null, ExtResource( 14 ), null, ExtResource( 22 ), null ],
+"loop": true,
+"name": "invuln_in_air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), null, ExtResource( 12 ), null ],
+"loop": true,
+"name": "invuln_idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=48]
+extents = Vector2( 40.3027, 42.4785 )
+
+[sub_resource type="PackedScene" id=49]
+_bundled = {
+"conn_count": 3,
+"conns": PoolIntArray( 1073741870, 1073741871, 287, 288, 2, 0, 1073741872, 1073741873, 289, 290, 2, 0, 1073741874, 1073741875, 291, 292, 2, 0 ),
+"editable_instances": [  ],
+"names": PoolStringArray( "Node2D", "Node2D", "UserInterface", "CanvasLayer", "UserInterface", "Control", "pause_mode", "anchor_right", "anchor_bottom", "script", "__meta__", "Label", "Label", "anchor_left", "anchor_right", "margin_left", "margin_top", "margin_right", "margin_bottom", "custom_fonts/font", "text", "align", "__meta__", "Death", "Label", "visible", "anchor_left", "anchor_top", "anchor_right", "anchor_bottom", "margin_left", "margin_top", "margin_right", "margin_bottom", "custom_fonts/font", "custom_colors/font_color", "text", "__meta__", "PauseOverlay", "ColorRect", "visible", "anchor_right", "anchor_bottom", "color", "__meta__", "Title", "Label", "anchor_left", "anchor_top", "anchor_right", "anchor_bottom", "margin_left", "margin_top", "margin_right", "margin_bottom", "custom_fonts/font", "text", "align", "__meta__", "VBoxContainer", "VBoxContainer", "anchor_left", "anchor_top", "anchor_right", "anchor_bottom", "margin_left", "margin_top", "margin_right", "margin_bottom", "__meta__", "RetryButton", "margin_right", "custom_fonts/font", "ChangeScene", "margin_top", "margin_right", "margin_bottom", "custom_fonts/font", "text", "next_scene_path", "Quit", "margin_top", "margin_right", "margin_bottom", "custom_fonts/font", "BackgroundLayer", "CanvasLayer", "layer", "Background", "TextureRect", "anchor_right", "anchor_bottom", "texture", "__meta__", "TileMap", "TileMap", "tile_set", "cell_size", "collision_layer", "collision_mask", "format", "tile_data", "Spikes", "Node", "Spike", "KinematicBody2D", "position", "collision_layer", "collision_mask", "__meta__", "Sprite", "Sprite", "texture", "CollisionShape2D", "CollisionShape2D", "scale", "shape", "Spike2", "KinematicBody2D", "position", "collision_layer", "collision_mask", "__meta__", "Sprite", "Sprite", "texture", "CollisionShape2D", "CollisionShape2D", "scale", "shape", "Spike3", "KinematicBody2D", "position", "collision_layer", "collision_mask", "__meta__", "Sprite", "Sprite", "texture", "CollisionShape2D", "CollisionShape2D", "scale", "shape", "Spike4", "KinematicBody2D", "position", "collision_layer", "collision_mask", "__meta__", "Sprite", "Sprite", "texture", "CollisionShape2D", "CollisionShape2D", "scale", "shape", "Skeleton", "KinematicBody2D", "position", "collision_layer", "collision_mask", "script", "__meta__", "CollisionShape2D", "CollisionShape2D", "position", "shape", "VisibilityEnabler2D", "VisibilityEnabler2D", "position", "scale", "process_parent", "physics_process_parent", "RayCast2D", "RayCast2D", "position", "rotation", "enabled", "cast_to", "collision_mask", "AnimationPlayer", "AnimationPlayer", "anims/Attack", "anims/Die", "anims/Hit", "anims/Idle", "anims/React", "anims/Walk", "Idle", "Sprite", "visible", "scale", "texture", "hframes", "Attack", "Sprite", "visible", "position", "scale", "texture", "flip_h", "hframes", "frame", "Die", "Sprite", "visible", "scale", "texture", "hframes", "Hit", "Sprite", "visible", "scale", "texture", "hframes", "React", "Sprite", "visible", "scale", "texture", "hframes", "frame", "Walk", "Sprite", "visible", "position", "scale", "texture", "flip_h", "hframes", "ProjectileDetector", "Area2D", "collision_layer", "collision_mask", "CollisionShape2D", "CollisionShape2D", "position", "scale", "shape", "HealthBar", "TextureProgress", "margin_left", "margin_top", "margin_right", "margin_bottom", "value", "texture_progress", "__meta__", "Player", "KinematicBody2D", "position", "collision_layer", "collision_mask", "script", "__meta__", "speed", "Camera2D", "Camera2D", "current", "zoom", "limit_left", "limit_top", "smoothing_enabled", "smoothing_speed", "offset_v", "drag_margin_left", "drag_margin_right", "CollisionShape2D", "CollisionShape2D", "position", "scale", "shape", "AnimatedSprite", "AnimatedSprite", "scale", "frames", "animation", "playing", "EnemyDetector", "Area2D", "collision_layer", "collision_mask", "CollisionShape2D", "CollisionShape2D", "position", "scale", "shape", "animation_finished", "_on_AnimationPlayer_attack_finished", "area_entered", "_on_ProjectileDetector_area_entered", "body_entered", "_on_EnemyDetector_body_entered" ),
+"node_count": 47,
+"node_paths": [ NodePath("."), NodePath("./UserInterface"), NodePath("./UserInterface/UserInterface"), NodePath("./UserInterface/UserInterface"), NodePath("./UserInterface/UserInterface"), NodePath("./UserInterface/UserInterface/PauseOverlay"), NodePath("./UserInterface/UserInterface/PauseOverlay"), NodePath("./UserInterface/UserInterface/PauseOverlay/VBoxContainer"), NodePath("./UserInterface/UserInterface/PauseOverlay/VBoxContainer"), NodePath("./UserInterface/UserInterface/PauseOverlay/VBoxContainer"), NodePath("."), NodePath("./BackgroundLayer"), NodePath("."), NodePath("."), NodePath("./Spikes"), NodePath("./Spikes/Spike"), NodePath("./Spikes/Spike"), NodePath("./Spikes"), NodePath("./Spikes/Spike2"), NodePath("./Spikes/Spike2"), NodePath("./Spikes"), NodePath("./Spikes/Spike3"), NodePath("./Spikes/Spike3"), NodePath("./Spikes"), NodePath("./Spikes/Spike4"), NodePath("./Spikes/Spike4"), NodePath("."), NodePath("./Skeleton"), NodePath("./Skeleton"), NodePath("./Skeleton"), NodePath("./Skeleton"), NodePath("./Skeleton"), NodePath("./Skeleton"), NodePath("./Skeleton"), NodePath("./Skeleton"), NodePath("./Skeleton"), NodePath("./Skeleton"), NodePath("./Skeleton"), NodePath("./Skeleton/ProjectileDetector"), NodePath("./Skeleton"), NodePath("."), NodePath("./Player"), NodePath("./Player"), NodePath("./Player"), NodePath("./Player"), NodePath("./Player/EnemyDetector"), NodePath("Skeleton/AnimationPlayer"), NodePath("Skeleton"), NodePath("Skeleton/ProjectileDetector"), NodePath("Skeleton"), NodePath("Player/EnemyDetector"), NodePath("Player") ],
+"nodes": PoolIntArray( -1, -1, 1, 0, -1, 0, 0, 1073741824, 0, 3, 2, -1, 0, 0, 1073741825, 0, 5, 4, -1, 5, 6, 0, 7, 1, 8, 2, 9, 3, 10, 4, 0, 1073741826, 0, 12, 11, -1, 10, 13, 5, 14, 6, 15, 7, 16, 8, 17, 9, 18, 10, 19, 11, 20, 12, 21, 13, 22, 14, 0, 1073741827, 0, 24, 23, -1, 13, 25, 15, 26, 16, 27, 17, 28, 18, 29, 19, 30, 20, 31, 21, 32, 22, 33, 23, 34, 24, 35, 25, 36, 26, 37, 27, 0, 1073741828, 0, 39, 38, -1, 5, 40, 28, 41, 29, 42, 30, 43, 31, 44, 32, 0, 1073741829, 0, 46, 45, -1, 12, 47, 33, 48, 34, 49, 35, 50, 36, 51, 37, 52, 38, 53, 39, 54, 40, 55, 41, 56, 42, 57, 43, 58, 44, 0, 1073741830, 0, 60, 59, -1, 9, 61, 45, 62, 46, 63, 47, 64, 48, 65, 49, 66, 50, 67, 51, 68, 52, 69, 53, 0, 1073741831, 0, 2147483647, 70, 54, 2, 71, 55, 72, 56, 0, 1073741832, 0, 2147483647, 73, 57, 6, 74, 58, 75, 59, 76, 60, 77, 61, 78, 62, 79, 63, 0, 1073741833, 0, 2147483647, 80, 64, 4, 81, 65, 82, 66, 83, 67, 84, 68, 0, 1073741834, 0, 86, 85, -1, 1, 87, 69, 0, 1073741835, 0, 89, 88, -1, 4, 90, 70, 91, 71, 92, 72, 93, 73, 0, 1073741836, 0, 95, 94, -1, 6, 96, 74, 97, 75, 98, 76, 99, 77, 100, 78, 101, 79, 0, 1073741837, 0, 103, 102, -1, 0, 0, 1073741838, 0, 105, 104, -1, 4, 106, 80, 107, 81, 108, 82, 109, 83, 0, 1073741839, 0, 111, 110, -1, 1, 112, 84, 0, 1073741840, 0, 114, 113, -1, 2, 115, 85, 116, 86, 0, 1073741841, 0, 118, 117, -1, 4, 119, 87, 120, 88, 121, 89, 122, 90, 0, 1073741842, 0, 124, 123, -1, 1, 125, 91, 0, 1073741843, 0, 127, 126, -1, 2, 128, 92, 129, 93, 0, 1073741844, 0, 131, 130, -1, 4, 132, 94, 133, 95, 134, 96, 135, 97, 0, 1073741845, 0, 137, 136, -1, 1, 138, 98, 0, 1073741846, 0, 140, 139, -1, 2, 141, 99, 142, 100, 0, 1073741847, 0, 144, 143, -1, 4, 145, 101, 146, 102, 147, 103, 148, 104, 0, 1073741848, 0, 150, 149, -1, 1, 151, 105, 0, 1073741849, 0, 153, 152, -1, 2, 154, 106, 155, 107, 0, 1073741850, 0, 157, 156, -1, 5, 158, 108, 159, 109, 160, 110, 161, 111, 162, 112, 0, 1073741851, 0, 164, 163, -1, 2, 165, 113, 166, 114, 0, 1073741852, 0, 168, 167, -1, 4, 169, 115, 170, 116, 171, 117, 172, 118, 0, 1073741853, 0, 174, 173, -1, 5, 175, 119, 176, 120, 177, 121, 178, 122, 179, 123, 0, 1073741854, 0, 181, 180, -1, 6, 182, 124, 183, 125, 184, 126, 185, 127, 186, 128, 187, 129, 0, 1073741855, 0, 189, 188, -1, 4, 190, 130, 191, 131, 192, 132, 193, 133, 0, 1073741856, 0, 195, 194, -1, 7, 196, 134, 197, 135, 198, 136, 199, 137, 200, 138, 201, 139, 202, 140, 0, 1073741857, 0, 204, 203, -1, 4, 205, 141, 206, 142, 207, 143, 208, 144, 0, 1073741858, 0, 210, 209, -1, 4, 211, 145, 212, 146, 213, 147, 214, 148, 0, 1073741859, 0, 216, 215, -1, 5, 217, 149, 218, 150, 219, 151, 220, 152, 221, 153, 0, 1073741860, 0, 223, 222, -1, 6, 224, 154, 225, 155, 226, 156, 227, 157, 228, 158, 229, 159, 0, 1073741861, 0, 231, 230, -1, 2, 232, 160, 233, 161, 0, 1073741862, 0, 235, 234, -1, 3, 236, 162, 237, 163, 238, 164, 0, 1073741863, 0, 240, 239, -1, 7, 241, 165, 242, 166, 243, 167, 244, 168, 245, 169, 246, 170, 247, 171, 0, 1073741864, 0, 249, 248, -1, 6, 250, 172, 251, 173, 252, 174, 253, 175, 254, 176, 255, 177, 0, 1073741865, 0, 257, 256, -1, 9, 258, 178, 259, 179, 260, 180, 261, 181, 262, 182, 263, 183, 264, 184, 265, 185, 266, 186, 0, 1073741866, 0, 268, 267, -1, 3, 269, 187, 270, 188, 271, 189, 0, 1073741867, 0, 273, 272, -1, 4, 274, 190, 275, 191, 276, 192, 277, 193, 0, 1073741868, 0, 279, 278, -1, 2, 280, 194, 281, 195, 0, 1073741869, 0, 283, 282, -1, 3, 284, 196, 285, 197, 286, 198, 0 ),
+"variants": [ 2, 1.0, 1.0, ExtResource( 38 ), {
+"_edit_use_anchors_": false
+}, 1.0, 1.0, -193.662, 26.0864, -9.66199, 127.086, SubResource( 32 ), "Deaths: %s", 1, {
+"_edit_use_anchors_": false
+}, false, 0.5, 0.5, 0.5, 0.5, -219.5, -120.0, 219.5, 120.0, SubResource( 33 ), Color( 0, 0, 0, 1 ), "You Died", {
+"_edit_use_anchors_": false
+}, false, 1.0, 1.0, Color( 0, 0, 0, 0.141176 ), {
+"_edit_use_anchors_": false
+}, 0.5, 0.5, 0.5, 0.5, -89.5, -225.611, 89.5, -85.6112, SubResource( 34 ), "Paused", 1, {
+"_edit_use_anchors_": false
+}, 0.5, 0.5, 0.5, 0.5, -179.0, -100.879, 179.0, 267.121, {
+"_edit_use_anchors_": false
+}, ExtResource( 37 ), 358.0, SubResource( 35 ), ExtResource( 33 ), 111.0, 358.0, 257.0, SubResource( 36 ), "Main Menu", "res://src/Screens/MainScreen.tscn", ExtResource( 39 ), 261.0, 358.0, 368.0, SubResource( 37 ), -100, 1.0, 1.0, ExtResource( 32 ), {
+"_edit_use_anchors_": false
+}, ExtResource( 16 ), Vector2( 128, 128 ), 16, 0, 1, PoolIntArray( 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327723, 1, 0, 327724, 1, 0, 327725, 1, 0, 327726, 1, 0, 393216, 1, 0, 393217, 1, 0, 393218, 1, 0, 393259, 1, 0, 393260, 1, 0, 393261, 1, 0, 393262, 1, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458795, 1, 0, 458796, 1, 0, 458797, 1, 0, 458798, 1, 0, 524288, 1, 0, 524289, 1, 0, 524290, 1, 0, 524331, 1, 0, 524332, 1, 0, 524333, 1, 0, 524334, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589847, 1, 0, 589849, 1, 0, 589867, 1, 0, 589868, 1, 0, 589869, 1, 0, 589870, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 1, 0, 655383, 1, 0, 655385, 1, 0, 655403, 1, 0, 655404, 1, 0, 655405, 1, 0, 655406, 1, 0, 720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720919, 1, 0, 720921, 1, 0, 720939, 1, 0, 720940, 1, 0, 720941, 1, 0, 720942, 1, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 786452, 1, 0, 786453, 1, 0, 786454, 1, 0, 786455, 1, 0, 786456, 1, 0, 786457, 1, 0, 786458, 1, 0, 786459, 1, 0, 786460, 1, 0, 786461, 1, 0, 786462, 1, 0, 786463, 1, 0, 786464, 1, 0, 786465, 1, 0, 786466, 1, 0, 786467, 1, 0, 786468, 1, 0, 786469, 1, 0, 786470, 1, 0, 786471, 1, 0, 786472, 1, 0, 786473, 1, 0, 786474, 1, 0, 786475, 1, 0, 786476, 1, 0, 786477, 1, 0, 786478, 1, 0, 851968, 1, 0, 851969, 1, 0, 851970, 1, 0, 851971, 1, 0, 851972, 1, 0, 851973, 1, 0, 851974, 1, 0, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0, 851984, 1, 0, 851985, 1, 0, 851986, 1, 0, 851987, 1, 0, 851988, 1, 0, 851989, 1, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 1, 0, 851994, 1, 0, 851995, 1, 0, 851996, 1, 0, 851997, 1, 0, 851998, 1, 0, 851999, 1, 0, 852000, 1, 0, 852001, 1, 0, 852002, 1, 0, 852003, 1, 0, 852004, 1, 0, 852005, 1, 0, 852006, 1, 0, 852007, 1, 0, 852008, 1, 0, 852009, 1, 0, 852010, 1, 0, 852011, 1, 0, 852012, 1, 0, 852013, 1, 0, 852014, 1, 0, 917504, 1, 0, 917505, 1, 0, 917506, 1, 0, 917507, 1, 0, 917508, 1, 0, 917509, 1, 0, 917510, 1, 0, 917511, 1, 0, 917512, 1, 0, 917513, 1, 0, 917514, 1, 0, 917515, 1, 0, 917516, 1, 0, 917517, 1, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 1, 0, 917522, 1, 0, 917523, 1, 0, 917524, 1, 0, 917525, 1, 0, 917526, 1, 0, 917527, 1, 0, 917528, 1, 0, 917529, 1, 0, 917530, 1, 0, 917531, 1, 0, 917532, 1, 0, 917533, 1, 0, 917534, 1, 0, 917535, 1, 0, 917536, 1, 0, 917537, 1, 0, 917538, 1, 0, 917539, 1, 0, 917540, 1, 0, 917541, 1, 0, 917542, 1, 0, 917543, 1, 0, 917544, 1, 0, 917545, 1, 0, 917546, 1, 0, 917547, 1, 0, 917548, 1, 0, 917549, 1, 0, 917550, 1, 0, 983040, 1, 0, 983041, 1, 0, 983042, 1, 0, 983043, 1, 0, 983044, 1, 0, 983045, 1, 0, 983046, 1, 0, 983047, 1, 0, 983048, 1, 0, 983049, 1, 0, 983050, 1, 0, 983051, 1, 0, 983052, 1, 0, 983053, 1, 0, 983054, 1, 0, 983055, 1, 0, 983056, 1, 0, 983059, 0, 0, 983060, 0, 0, 983061, 0, 0, 983062, 1, 0, 983063, 1, 0, 983064, 1, 0, 983065, 1, 0, 983066, 1, 0, 983067, 1, 0, 983068, 1, 0, 983069, 1, 0, 983070, 1, 0, 983071, 1, 0, 983072, 1, 0, 983073, 1, 0, 983074, 1, 0, 983075, 1, 0, 983076, 1, 0, 983077, 1, 0, 983078, 1, 0, 983079, 1, 0, 983080, 1, 0, 983081, 1, 0, 983082, 1, 0, 983083, 1, 0, 983084, 1, 0, 983085, 1, 0, 983086, 1, 0, 1048576, 1, 0, 1048577, 1, 0, 1048578, 1, 0, 1048579, 1, 0, 1048580, 1, 0, 1048581, 1, 0, 1048582, 1, 0, 1048583, 1, 0, 1048584, 1, 0, 1048585, 1, 0, 1048586, 1, 0, 1048587, 1, 0, 1048588, 1, 0, 1048589, 1, 0, 1048590, 1, 0, 1048591, 1, 0, 1048592, 1, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 1, 0, 1048605, 1, 0, 1048606, 1, 0, 1048607, 1, 0, 1048608, 1, 0, 1048609, 1, 0, 1048610, 1, 0, 1048611, 1, 0, 1048612, 1, 0, 1048613, 1, 0, 1048614, 1, 0, 1048615, 1, 0, 1048616, 1, 0, 1048617, 1, 0, 1048618, 1, 0, 1048619, 1, 0, 1048620, 1, 0, 1048621, 1, 0, 1048622, 1, 0, 1114112, 1, 0, 1114113, 1, 0, 1114114, 1, 0, 1114115, 1, 0, 1114116, 1, 0, 1114117, 1, 0, 1114118, 1, 0, 1114119, 1, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1114144, 1, 0, 1114145, 1, 0, 1114146, 1, 0, 1114147, 1, 0, 1114148, 1, 0, 1114149, 1, 0, 1114150, 1, 0, 1114151, 1, 0, 1114152, 1, 0, 1114153, 1, 0, 1114154, 1, 0, 1114155, 1, 0, 1114156, 1, 0, 1114157, 1, 0, 1114158, 1, 0 ), Vector2( 2368.24, 2018.86 ), 8, 2, {
+"_edit_group_": true
+}, ExtResource( 45 ), Vector2( 6, 6 ), SubResource( 38 ), Vector2( 2240.29, 2018.91 ), 8, 2, {
+"_edit_group_": true
+}, ExtResource( 45 ), Vector2( 6, 6 ), SubResource( 38 ), Vector2( 5115.29, 437.112 ), 8, 2, {
+"_edit_group_": true
+}, ExtResource( 45 ), Vector2( 6, 6 ), SubResource( 38 ), Vector2( 4987.34, 437.162 ), 8, 2, {
+"_edit_group_": true
+}, ExtResource( 45 ), Vector2( 6, 6 ), SubResource( 38 ), Vector2( 4394.37, 1399.4 ), 4, 26, ExtResource( 30 ), {
+"_edit_group_": true
+}, Vector2( -50, 32 ), SubResource( 39 ), Vector2( -56.721, 41.1014 ), Vector2( 5.82712, 11.892 ), true, true, Vector2( -40, 35 ), 3.14159, true, Vector2( 200, 0 ), 2, SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), false, Vector2( 8, 8 ), ExtResource( 29 ), 11, false, Vector2( 0, -20 ), Vector2( 8, 8 ), ExtResource( 24 ), true, 18, 1, false, Vector2( 8, 8 ), ExtResource( 27 ), 15, false, Vector2( 8, 8 ), ExtResource( 26 ), 8, false, Vector2( 8, 8 ), ExtResource( 25 ), 4, 3, false, Vector2( 0, -4 ), Vector2( 8, 8 ), ExtResource( 28 ), true, 13, 4, 32, Vector2( -50, 32 ), Vector2( 1.1, 1.05 ), SubResource( 39 ), -115.934, -129.024, 29.0657, 15.9763, 100.0, ExtResource( 31 ), {
+"_edit_use_anchors_": false
+}, Vector2( 2635.07, 1444.19 ), 2, 16, ExtResource( 19 ), {
+"_edit_group_": true
+}, Vector2( 700, 1400 ), true, Vector2( 3, 3 ), 0, 0, true, 9.0, -1.0, 0.0, 0.0, Vector2( -5, 5 ), Vector2( 2, 2 ), SubResource( 46 ), Vector2( 10, 10 ), SubResource( 47 ), "idle", true, 2, 12, Vector2( -5, 5 ), Vector2( 2, 2 ), SubResource( 48 ) ],
+"version": 2
+}
+
+[sub_resource type="CapsuleShape2D" id=19]
+radius = 75.5845
+height = 49.0082
+
+[sub_resource type="Animation" id=20]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("PortalAnimation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "teleport"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Transition/ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Transition/ColorRect:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3.2, 3.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 36.4119, 38.9117 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 8 ), ExtResource( 17 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "move_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "take_dmg",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 1 ), ExtResource( 21 ), ExtResource( 2 ), ExtResource( 14 ), ExtResource( 20 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "in_air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), null, ExtResource( 17 ), null, ExtResource( 18 ), null ],
+"loop": true,
+"name": "invuln_move_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), null, ExtResource( 21 ), null, ExtResource( 14 ), null, ExtResource( 22 ), null ],
+"loop": true,
+"name": "invuln_in_air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), null, ExtResource( 12 ), null ],
+"loop": true,
+"name": "invuln_idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 40.3027, 42.4785 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 45.7532, 96.6448 )
+
+[sub_resource type="Animation" id=25]
+resource_name = "Attack"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Attack:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6, 0.8, 1.2, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [ Vector2( -90, 32 ), 180.0 ],
+"method": "set_animation_position"
+}, {
+"args": [ 12.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ 36.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ -10.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ -15.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ -10.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ -13.0 ],
+"method": "shift_animation_x"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ Vector2( -40, 35 ), 82.0 ],
+"method": "set_ray_position"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "check_attack"
+} ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "Die"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Die:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14 ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "Hit"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Hit:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "Idle"
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Idle:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [ Vector2( -50, 32 ), 96.0 ],
+"method": "set_animation_position"
+}, {
+"args": [ 10.0 ],
+"method": "shift_animation_x"
+}, {
+"args": [ -10.0 ],
+"method": "shift_animation_x"
+} ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "React"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("React:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "Walk"
+length = 1.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Walk:frame")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ Vector2( -35, 32 ), 75.0 ],
+"method": "set_animation_position"
+} ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+
+[node name="UserInterface" type="Control" parent="UserInterface"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 38 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UserInterface/UserInterface"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -193.662
+margin_top = 26.0864
+margin_right = -9.66199
+margin_bottom = 127.086
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Deaths: %s"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Death" type="Label" parent="UserInterface/UserInterface"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -219.5
+margin_top = -120.0
+margin_right = 219.5
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You Died"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseOverlay" type="ColorRect" parent="UserInterface/UserInterface"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.141176 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="UserInterface/UserInterface/PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -89.5
+margin_top = -225.611
+margin_right = 89.5
+margin_bottom = -85.6112
+custom_fonts/font = SubResource( 4 )
+text = "Paused"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/UserInterface/PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -179.0
+margin_top = -100.879
+margin_right = 179.0
+margin_bottom = 267.121
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryButton" parent="UserInterface/UserInterface/PauseOverlay/VBoxContainer" instance=ExtResource( 37 )]
+margin_right = 358.0
+custom_fonts/font = SubResource( 5 )
+
+[node name="ChangeScene" parent="UserInterface/UserInterface/PauseOverlay/VBoxContainer" instance=ExtResource( 33 )]
+margin_top = 111.0
+margin_right = 358.0
+margin_bottom = 257.0
+custom_fonts/font = SubResource( 6 )
+text = "Main Menu"
+next_scene_path = "res://src/Screens/MainScreen.tscn"
+
+[node name="Quit" parent="UserInterface/UserInterface/PauseOverlay/VBoxContainer" instance=ExtResource( 39 )]
+margin_top = 261.0
+margin_right = 358.0
+margin_bottom = 368.0
+custom_fonts/font = SubResource( 7 )
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="Background" type="TextureRect" parent="BackgroundLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 16 )
+cell_size = Vector2( 128, 128 )
+collision_layer = 16
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327723, 1, 0, 327724, 1, 0, 327725, 1, 0, 327726, 1, 0, 393216, 1, 0, 393217, 1, 0, 393218, 1, 0, 393259, 1, 0, 393260, 1, 0, 393261, 1, 0, 393262, 1, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458795, 1, 0, 458796, 1, 0, 458797, 1, 0, 458798, 1, 0, 524288, 1, 0, 524289, 1, 0, 524290, 1, 0, 524331, 1, 0, 524332, 1, 0, 524333, 1, 0, 524334, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589867, 1, 0, 589868, 1, 0, 589869, 1, 0, 589870, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 1, 0, 655403, 1, 0, 655404, 1, 0, 655405, 1, 0, 655406, 1, 0, 720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720939, 1, 0, 720940, 1, 0, 720941, 1, 0, 720942, 1, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 786452, 1, 0, 786453, 1, 0, 786454, 1, 0, 786455, 1, 0, 786456, 1, 0, 786457, 1, 0, 786458, 1, 0, 786459, 1, 0, 786460, 1, 0, 786461, 1, 0, 786462, 1, 0, 786463, 1, 0, 786464, 1, 0, 786465, 1, 0, 786466, 1, 0, 786467, 1, 0, 786468, 1, 0, 786469, 1, 0, 786470, 1, 0, 786471, 1, 0, 786472, 1, 0, 786473, 1, 0, 786474, 1, 0, 786475, 1, 0, 786476, 1, 0, 786477, 1, 0, 786478, 1, 0, 851968, 1, 0, 851969, 1, 0, 851970, 1, 0, 851971, 1, 0, 851972, 1, 0, 851973, 1, 0, 851974, 1, 0, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0, 851984, 1, 0, 851985, 1, 0, 851986, 1, 0, 851987, 1, 0, 851988, 1, 0, 851989, 1, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 1, 0, 851994, 1, 0, 851995, 1, 0, 851996, 1, 0, 851997, 1, 0, 851998, 1, 0, 851999, 1, 0, 852000, 1, 0, 852001, 1, 0, 852002, 1, 0, 852003, 1, 0, 852004, 1, 0, 852005, 1, 0, 852006, 1, 0, 852007, 1, 0, 852008, 1, 0, 852009, 1, 0, 852010, 1, 0, 852011, 1, 0, 852012, 1, 0, 852013, 1, 0, 852014, 1, 0, 917504, 1, 0, 917505, 1, 0, 917506, 1, 0, 917507, 1, 0, 917508, 1, 0, 917509, 1, 0, 917510, 1, 0, 917511, 1, 0, 917512, 1, 0, 917513, 1, 0, 917514, 1, 0, 917515, 1, 0, 917516, 1, 0, 917517, 1, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 1, 0, 917522, 1, 0, 917523, 1, 0, 917524, 1, 0, 917525, 1, 0, 917526, 1, 0, 917527, 1, 0, 917528, 1, 0, 917529, 1, 0, 917530, 1, 0, 917531, 1, 0, 917532, 1, 0, 917533, 1, 0, 917534, 1, 0, 917535, 1, 0, 917536, 1, 0, 917537, 1, 0, 917538, 1, 0, 917539, 1, 0, 917540, 1, 0, 917541, 1, 0, 917542, 1, 0, 917543, 1, 0, 917544, 1, 0, 917545, 1, 0, 917546, 1, 0, 917547, 1, 0, 917548, 1, 0, 917549, 1, 0, 917550, 1, 0, 983040, 1, 0, 983041, 1, 0, 983042, 1, 0, 983043, 1, 0, 983044, 1, 0, 983045, 1, 0, 983046, 1, 0, 983047, 1, 0, 983048, 1, 0, 983049, 1, 0, 983050, 1, 0, 983051, 1, 0, 983052, 1, 0, 983053, 1, 0, 983054, 1, 0, 983055, 1, 0, 983056, 1, 0, 983059, 0, 0, 983060, 0, 0, 983061, 0, 0, 983062, 1, 0, 983063, 1, 0, 983064, 1, 0, 983065, 1, 0, 983066, 1, 0, 983067, 1, 0, 983068, 1, 0, 983069, 1, 0, 983070, 1, 0, 983071, 1, 0, 983072, 1, 0, 983073, 1, 0, 983074, 1, 0, 983075, 1, 0, 983076, 1, 0, 983077, 1, 0, 983078, 1, 0, 983079, 1, 0, 983080, 1, 0, 983081, 1, 0, 983082, 1, 0, 983083, 1, 0, 983084, 1, 0, 983085, 1, 0, 983086, 1, 0, 1048576, 1, 0, 1048577, 1, 0, 1048578, 1, 0, 1048579, 1, 0, 1048580, 1, 0, 1048581, 1, 0, 1048582, 1, 0, 1048583, 1, 0, 1048584, 1, 0, 1048585, 1, 0, 1048586, 1, 0, 1048587, 1, 0, 1048588, 1, 0, 1048589, 1, 0, 1048590, 1, 0, 1048591, 1, 0, 1048592, 1, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 1, 0, 1048605, 1, 0, 1048606, 1, 0, 1048607, 1, 0, 1048608, 1, 0, 1048609, 1, 0, 1048610, 1, 0, 1048611, 1, 0, 1048612, 1, 0, 1048613, 1, 0, 1048614, 1, 0, 1048615, 1, 0, 1048616, 1, 0, 1048617, 1, 0, 1048618, 1, 0, 1048619, 1, 0, 1048620, 1, 0, 1048621, 1, 0, 1048622, 1, 0, 1114112, 1, 0, 1114113, 1, 0, 1114114, 1, 0, 1114115, 1, 0, 1114116, 1, 0, 1114117, 1, 0, 1114118, 1, 0, 1114119, 1, 0, 1114120, 1, 0, 1114121, 1, 0, 1114122, 1, 0, 1114123, 1, 0, 1114124, 1, 0, 1114125, 1, 0, 1114126, 1, 0, 1114127, 1, 0, 1114128, 1, 0, 1114129, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114132, 1, 0, 1114133, 1, 0, 1114134, 1, 0, 1114135, 1, 0, 1114136, 1, 0, 1114137, 1, 0, 1114138, 1, 0, 1114139, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1114144, 1, 0, 1114145, 1, 0, 1114146, 1, 0, 1114147, 1, 0, 1114148, 1, 0, 1114149, 1, 0, 1114150, 1, 0, 1114151, 1, 0, 1114152, 1, 0, 1114153, 1, 0, 1114154, 1, 0, 1114155, 1, 0, 1114156, 1, 0, 1114157, 1, 0, 1114158, 1, 0 )
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Spike" type="KinematicBody2D" parent="Spikes"]
+position = Vector2( 2368.24, 2018.86 )
+collision_layer = 8
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Spikes/Spike"]
+texture = ExtResource( 45 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike"]
+scale = Vector2( 6, 6 )
+shape = SubResource( 8 )
+
+[node name="Spike2" type="KinematicBody2D" parent="Spikes"]
+position = Vector2( 2240.29, 2018.91 )
+collision_layer = 8
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Spikes/Spike2"]
+texture = ExtResource( 45 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike2"]
+scale = Vector2( 6, 6 )
+shape = SubResource( 8 )
+
+[node name="Spike3" type="KinematicBody2D" parent="Spikes"]
+position = Vector2( 5115.29, 437.112 )
+collision_layer = 8
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Spikes/Spike3"]
+texture = ExtResource( 45 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike3"]
+scale = Vector2( 6, 6 )
+shape = SubResource( 8 )
+
+[node name="Spike4" type="KinematicBody2D" parent="Spikes"]
+position = Vector2( 4987.34, 437.162 )
+collision_layer = 8
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Spikes/Spike4"]
+texture = ExtResource( 45 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike4"]
+scale = Vector2( 6, 6 )
+shape = SubResource( 8 )
+
+[node name="Portal" type="Area2D" parent="."]
+position = Vector2( 5069.19, 1406.64 )
+collision_layer = 64
+collision_mask = 2
+script = ExtResource( 34 )
+__meta__ = {
+"_edit_group_": true
+}
+next_scene = SubResource( 49 )
+
+[node name="PortalAnimation" type="Sprite" parent="Portal"]
+texture = ExtResource( 35 )
+vframes = 7
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
+position = Vector2( -5.36618, 26.4016 )
+shape = SubResource( 19 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Portal"]
+anims/Open = SubResource( 20 )
+
+[node name="Transition" type="CanvasLayer" parent="Portal"]
+
+[node name="ColorRect" type="ColorRect" parent="Portal/Transition"]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 2716.89, 1446.54 )
+collision_layer = 2
+collision_mask = 16
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = Vector2( 700, 1400 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 2, 2 )
+limit_left = 0
+limit_top = 0
+smoothing_enabled = true
+smoothing_speed = 9.0
+drag_margin_left = 0.0
+drag_margin_right = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( -5, 5 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 21 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
+scale = Vector2( 10, 10 )
+frames = SubResource( 22 )
+animation = "invuln_idle"
+
+[node name="EnemyDetector" type="Area2D" parent="Player"]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/EnemyDetector"]
+position = Vector2( -5, 5 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 23 )
+
+[node name="Skeleton" type="KinematicBody2D" parent="."]
+position = Vector2( 3973.15, 1402.49 )
+collision_layer = 4
+collision_mask = 24
+script = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton"]
+position = Vector2( -50, 32 )
+shape = SubResource( 24 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="Skeleton"]
+position = Vector2( -56.721, 41.1014 )
+scale = Vector2( 5.82712, 11.892 )
+process_parent = true
+physics_process_parent = true
+
+[node name="RayCast2D" type="RayCast2D" parent="Skeleton"]
+position = Vector2( -40, 35 )
+rotation = 3.14159
+enabled = true
+cast_to = Vector2( 200, 0 )
+collision_mask = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Skeleton"]
+anims/Attack = SubResource( 25 )
+anims/Die = SubResource( 26 )
+anims/Hit = SubResource( 27 )
+anims/Idle = SubResource( 28 )
+anims/React = SubResource( 29 )
+anims/Walk = SubResource( 30 )
+
+[node name="Idle" type="Sprite" parent="Skeleton"]
+scale = Vector2( 8, 8 )
+texture = ExtResource( 29 )
+hframes = 11
+
+[node name="Attack" type="Sprite" parent="Skeleton"]
+visible = false
+position = Vector2( 0, -20 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 24 )
+flip_h = true
+hframes = 18
+frame = 1
+
+[node name="Die" type="Sprite" parent="Skeleton"]
+visible = false
+scale = Vector2( 8, 8 )
+texture = ExtResource( 27 )
+hframes = 15
+frame = 14
+
+[node name="Hit" type="Sprite" parent="Skeleton"]
+visible = false
+scale = Vector2( 8, 8 )
+texture = ExtResource( 26 )
+hframes = 8
+
+[node name="React" type="Sprite" parent="Skeleton"]
+visible = false
+scale = Vector2( 8, 8 )
+texture = ExtResource( 25 )
+hframes = 4
+frame = 3
+
+[node name="Walk" type="Sprite" parent="Skeleton"]
+visible = false
+position = Vector2( 0, -4 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 28 )
+flip_h = true
+hframes = 13
+
+[node name="ProjectileDetector" type="Area2D" parent="Skeleton"]
+collision_layer = 4
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton/ProjectileDetector"]
+position = Vector2( -50, 32 )
+scale = Vector2( 1.1, 1.05 )
+shape = SubResource( 24 )
+
+[node name="HealthBar" type="TextureProgress" parent="Skeleton"]
+margin_left = -115.0
+margin_top = -129.024
+margin_right = 29.0657
+margin_bottom = 15.9763
+value = 100.0
+texture_progress = ExtResource( 31 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="area_entered" from="Portal" to="Portal" method="_on_Portal_area_entered"]
+[connection signal="body_entered" from="Player/EnemyDetector" to="Player" method="_on_EnemyDetector_body_entered"]
+[connection signal="animation_finished" from="Skeleton/AnimationPlayer" to="Skeleton" method="_on_AnimationPlayer_attack_finished"]
+[connection signal="area_entered" from="Skeleton/ProjectileDetector" to="Skeleton" method="_on_ProjectileDetector_area_entered"]
+[connection signal="body_shape_entered" from="Skeleton/ProjectileDetector" to="Skeleton" method="_on_ProjectileDetector_body_shape_entered"]

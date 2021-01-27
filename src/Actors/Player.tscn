@@ -1,0 +1,107 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://assets/Player/frame_07_delay-0.1s.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/Player/frame_13_delay-1s.png" type="Texture" id=3]
+[ext_resource path="res://assets/Player/frame_04_delay-0.1s.png" type="Texture" id=4]
+[ext_resource path="res://assets/Player/frame_16_delay-0.1s.png" type="Texture" id=5]
+[ext_resource path="res://assets/Player/frame_05_delay-0.1s.png" type="Texture" id=6]
+[ext_resource path="res://assets/Player/frame_14_delay-0.1s.png" type="Texture" id=7]
+[ext_resource path="res://assets/Player/frame_00_delay-0.1s.png" type="Texture" id=8]
+[ext_resource path="res://assets/Player/frame_02_delay-0.1s.png" type="Texture" id=9]
+[ext_resource path="res://assets/Player/frame_03_delay-0.1s.png" type="Texture" id=10]
+[ext_resource path="res://assets/Player/frame_15_delay-0.1s.png" type="Texture" id=11]
+[ext_resource path="res://assets/Player/frame_06_delay-0.1s.png" type="Texture" id=12]
+[ext_resource path="res://assets/Player/frame_08_delay-0.1s.png" type="Texture" id=13]
+[ext_resource path="res://assets/Player/frame_18_delay-0.1s.png" type="Texture" id=14]
+[ext_resource path="res://assets/Player/frame_20_delay-0.1s.png" type="Texture" id=15]
+[ext_resource path="res://assets/Player/frame_21_delay-0.1s.png" type="Texture" id=16]
+[ext_resource path="res://assets/Player/frame_22_delay-0.1s.png" type="Texture" id=17]
+[ext_resource path="res://assets/Player/frame_19_delay-0.1s.png" type="Texture" id=18]
+[ext_resource path="res://assets/Player/frame_17_delay-0.1s.png" type="Texture" id=19]
+[ext_resource path="res://assets/Player/frame_23_delay-0.1s.png" type="Texture" id=20]
+[ext_resource path="res://assets/Player/frame_09_delay-0.1s.png" type="Texture" id=21]
+[ext_resource path="res://assets/Player/frame_01_delay-0.1s.png" type="Texture" id=22]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 36.4119, 38.9117 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 22 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 1 ), ExtResource( 13 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "move_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "take_dmg",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "in_air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), null, ExtResource( 12 ), null, ExtResource( 13 ), null ],
+"loop": true,
+"name": "invuln_move_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), null, ExtResource( 18 ), null, ExtResource( 16 ), null, ExtResource( 20 ), null ],
+"loop": true,
+"name": "invuln_in_air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), null, ExtResource( 9 ), null ],
+"loop": true,
+"name": "invuln_idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 40.3027, 42.4785 )
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 16
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = Vector2( 700, 1400 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 2, 2 )
+limit_left = 0
+limit_top = 0
+smoothing_enabled = true
+smoothing_speed = 9.0
+drag_margin_left = 0.0
+drag_margin_right = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -5, 5 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 10, 10 )
+frames = SubResource( 2 )
+animation = "invuln_idle"
+
+[node name="EnemyDetector" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
+position = Vector2( -5, 5 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 3 )
+[connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]
